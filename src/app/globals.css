@@ -403,7 +403,7 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 
 /* Home: 4-up work grid + case study tile */
 @media (min-width: 640px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-/* Desktop: case studies two-up, concepts three-up */
+/* Desktop: three case studies side by side */
 @media (min-width: 1100px) {
   .work-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .work-grid > * { grid-column: span 2; }
@@ -419,8 +419,10 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 .work-tile.photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,14,12,0.55) 0%, rgba(14,14,12,0) 30%, rgba(14,14,12,0) 60%, rgba(14,14,12,0.7) 100%); }
 .work-tile.photo > .work-top, .work-tile.photo > .work-pills { position: relative; z-index: 1; margin: 0; padding: clamp(20px, 2.4vw, 28px); }
 .work-tile.photo > .work-top { color: rgba(243,240,233,0.85); }
-.is-case .work-case-shot { max-width: 440px; margin: 0 auto; width: 100%; }
-@media (min-width: 1100px) { .is-case .work-tile { height: 440px; } }
+.is-case .work-case-shot { width: 100%; }
+.is-case .work-tile { min-height: 480px; padding: clamp(22px, 2.4vw, 32px); }
+@media (min-width: 1100px) { .is-case .work-tile { height: 520px; } }
+.is-case .work-meta-name { font-size: 22px; }
 
 /* Advisor Alpha case study */
 .aa-hero-media { margin-top: clamp(28px, 4vw, 56px); }

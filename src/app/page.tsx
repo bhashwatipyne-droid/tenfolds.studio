@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import { AuditForm, Calculator, CostBar, Faq, Process, Reveal, Services } from "@/components/Interactive";
-import { INK, checks, pad, problems, quality, work } from "@/lib/content";
+import { INK, checks, pad, problems, quality } from "@/lib/content";
 import Image from "next/image";
 import { shots } from "@/lib/finace";
 import { live } from "@/lib/advisoralpha";
@@ -80,7 +80,7 @@ export default function Home() {
         <section id="work" className="wrap work">
           <div className="section-head">
             <h2>Selected work</h2>
-            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(06)</span>
+            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(03)</span>
           </div>
           <div className="work-grid">
             <Reveal className="is-case">
@@ -90,7 +90,7 @@ export default function Home() {
                     <span>finace.co</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={shots.hero.src} width={shots.hero.w} height={shots.hero.h} alt={shots.hero.alt} sizes="(max-width: 640px) 100vw, 360px" />
+                    <Image src={shots.hero.src} width={shots.hero.w} height={shots.hero.h} alt={shots.hero.alt} sizes="(max-width: 640px) 100vw, 480px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Live in 10 days</span>
@@ -110,7 +110,7 @@ export default function Home() {
                     <span>myadvisoralpha.com</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={live.heroFold.src} width={live.heroFold.w} height={live.heroFold.h} alt={live.heroFold.alt} sizes="(max-width: 640px) 100vw, 440px" />
+                    <Image src={live.heroFold.src} width={live.heroFold.w} height={live.heroFold.h} alt={live.heroFold.alt} sizes="(max-width: 640px) 100vw, 480px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Built in 15 days</span>
@@ -130,7 +130,7 @@ export default function Home() {
                     <span>pmt · work management</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--ink)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={pmtMedia.poster.src} width={pmtMedia.poster.w} height={pmtMedia.poster.h} alt={pmtMedia.poster.alt} sizes="(max-width: 640px) 100vw, 440px" />
+                    <Image src={pmtMedia.poster.src} width={pmtMedia.poster.w} height={pmtMedia.poster.h} alt={pmtMedia.poster.alt} sizes="(max-width: 640px) 100vw, 480px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--ink)", color: "var(--lime)", fontWeight: 600 }}>0 → 20 weekly users</span>
@@ -143,33 +143,6 @@ export default function Home() {
                 </div>
               </a>
             </Reveal>
-            {work.map((p, i) => (
-              <Reveal key={p.name} delay={i * 90}>
-                <a href="#contact" className="work-item">
-                  <div className="work-tile" style={{ background: p.bg }}>
-                    <div className="work-top" style={{ color: p.sub }}>
-                      <span>{p.url}</span><span style={{ whiteSpace: "nowrap", flex: "none" }}>{p.tag}</span>
-                    </div>
-                    <div className="work-card" style={{ background: p.card }}>
-                      <div className="work-card-name" style={{ color: p.accent }}>{p.name}</div>
-                      <div className="work-card-head" style={{ color: p.ink }}>{p.head}</div>
-                      <div className="work-pills">
-                        <span style={{ background: p.accent, color: p.onAccent, fontWeight: 600 }}>{p.cta}</span>
-                        <span style={{ boxShadow: `inset 0 0 0 1px ${p.line}`, color: p.ink }}>SIP calculator</span>
-                      </div>
-                      <div className="work-kv">
-                        <div style={{ boxShadow: `inset 0 0 0 1px ${p.line}` }}><small style={{ color: p.sub2 }}>{p.k1}</small><b style={{ color: p.ink }}>{p.v1}</b></div>
-                        <div style={{ boxShadow: `inset 0 0 0 1px ${p.line}` }}><small style={{ color: p.sub2 }}>{p.k2}</small><b style={{ color: p.ink }}>{p.v2}</b></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="work-meta">
-                    <div><div className="work-meta-name">{p.name}</div><div className="work-meta-desc">{p.desc}</div></div>
-                    <span className="arrow-circle">↗</span>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
           </div>
 
           <Reveal className="calc" id="calculator">
