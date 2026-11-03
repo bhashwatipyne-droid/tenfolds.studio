@@ -90,7 +90,7 @@ export default function Home() {
                     <span>finace.co</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={shots.hero.src} width={shots.hero.w} height={shots.hero.h} alt={shots.hero.alt} sizes="(max-width: 640px) 100vw, 480px" />
+                    <Image src={shots.hero.src} width={shots.hero.w} height={shots.hero.h} alt={shots.hero.alt} sizes="(max-width: 1100px) 100vw, 640px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Live in 10 days</span>
@@ -110,7 +110,7 @@ export default function Home() {
                     <span>myadvisoralpha.com</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={live.heroFold.src} width={live.heroFold.w} height={live.heroFold.h} alt={live.heroFold.alt} sizes="(max-width: 640px) 100vw, 480px" />
+                    <Image src={live.heroFold.src} width={live.heroFold.w} height={live.heroFold.h} alt={live.heroFold.alt} sizes="(max-width: 1100px) 100vw, 640px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Built in 15 days</span>
@@ -130,7 +130,7 @@ export default function Home() {
                     <span>pmt · work management</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--ink)" }}>Case study</span>
                   </div>
                   <div className="work-case-shot">
-                    <Image src={pmtMedia.poster.src} width={pmtMedia.poster.w} height={pmtMedia.poster.h} alt={pmtMedia.poster.alt} sizes="(max-width: 640px) 100vw, 480px" />
+                    <Image src={pmtMedia.poster.src} width={pmtMedia.poster.w} height={pmtMedia.poster.h} alt={pmtMedia.poster.alt} sizes="(max-width: 1100px) 100vw, 820px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--ink)", color: "var(--lime)", fontWeight: 600 }}>0 → 20 weekly users</span>
