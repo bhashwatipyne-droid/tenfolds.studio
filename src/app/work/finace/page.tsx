@@ -228,7 +228,7 @@ export default function FinaceCaseStudy() {
           </div>
           <div className="legal">
             <span>© {new Date().getFullYear()} tenfolds</span>
-            <span>Screenshots from finace.co. Scores from Google PageSpeed Insights, which vary slightly between runs.</span>
+            <span><a href="/work/advisor-alpha" className="cs-link" style={{ color: "rgb(190,186,176)" }}>Next case study: Advisor Alpha →</a> · Screenshots from finace.co. Scores from Google PageSpeed Insights, which vary slightly between runs.</span>
           </div>
         </div>
       </footer>

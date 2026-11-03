@@ -3,6 +3,7 @@ import { AuditForm, Calculator, CostBar, Faq, Process, Reveal, Services } from "
 import { INK, checks, pad, problems, quality, work } from "@/lib/content";
 import Image from "next/image";
 import { shots } from "@/lib/finace";
+import { aa } from "@/lib/advisoralpha";
 
 const heroVideo = process.env.NEXT_PUBLIC_HERO_VIDEO;
 const heroImage = process.env.NEXT_PUBLIC_HERO_IMAGE;
@@ -78,10 +79,10 @@ export default function Home() {
         <section id="work" className="wrap work">
           <div className="section-head">
             <h2>Selected work</h2>
-            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(04)</span>
+            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(05)</span>
           </div>
           <div className="work-grid">
-            <Reveal>
+            <Reveal className="is-case">
               <a href="/work/finace" className="work-item">
                 <div className="work-tile" style={{ background: "rgb(14,14,12)" }}>
                   <div className="work-top" style={{ color: "rgb(160,156,146)" }}>
@@ -101,8 +102,26 @@ export default function Home() {
                 </div>
               </a>
             </Reveal>
+            <Reveal className="is-case" delay={90}>
+              <a href="/work/advisor-alpha" className="work-item">
+                <div className="work-tile photo">
+                  <Image src={aa.desktop.src} width={aa.desktop.w} height={aa.desktop.h} alt={aa.desktop.alt} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 640px" />
+                  <div className="work-top">
+                    <span>advisoralpha</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
+                  </div>
+                  <div className="work-pills work-case-pills">
+                    <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Built in 15 days</span>
+                    <span style={{ boxShadow: "inset 0 0 0 1px rgba(243,240,233,0.3)", color: "var(--paper)", background: "rgba(14,14,12,0.35)" }}>Design system · WordPress</span>
+                  </div>
+                </div>
+                <div className="work-meta">
+                  <div><div className="work-meta-name">Advisor Alpha</div><div className="work-meta-desc">Equity research platform · B2C fintech</div></div>
+                  <span className="arrow-circle">↗</span>
+                </div>
+              </a>
+            </Reveal>
             {work.map((p, i) => (
-              <Reveal key={p.name} delay={(i + 1) * 90}>
+              <Reveal key={p.name} delay={(i + 2) * 90}>
                 <a href="#contact" className="work-item">
                   <div className="work-tile" style={{ background: p.bg }}>
                     <div className="work-top" style={{ color: p.sub }}>
