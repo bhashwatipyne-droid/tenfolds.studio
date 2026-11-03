@@ -3,7 +3,7 @@ import { AuditForm, Calculator, CostBar, Faq, Process, Reveal, Services } from "
 import { INK, checks, pad, problems, quality, work } from "@/lib/content";
 import Image from "next/image";
 import { shots } from "@/lib/finace";
-import { aa } from "@/lib/advisoralpha";
+import { live } from "@/lib/advisoralpha";
 
 const heroVideo = process.env.NEXT_PUBLIC_HERO_VIDEO;
 const heroImage = process.env.NEXT_PUBLIC_HERO_IMAGE;
@@ -104,14 +104,16 @@ export default function Home() {
             </Reveal>
             <Reveal className="is-case" delay={90}>
               <a href="/work/advisor-alpha" className="work-item">
-                <div className="work-tile photo">
-                  <Image src={aa.desktop.src} width={aa.desktop.w} height={aa.desktop.h} alt={aa.desktop.alt} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 640px" />
-                  <div className="work-top">
-                    <span>advisoralpha</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
+                <div className="work-tile" style={{ background: "rgb(33,52,150)" }}>
+                  <div className="work-top" style={{ color: "rgb(190,200,240)" }}>
+                    <span>myadvisoralpha.com</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
+                  </div>
+                  <div className="work-case-shot">
+                    <Image src={live.heroFold.src} width={live.heroFold.w} height={live.heroFold.h} alt={live.heroFold.alt} sizes="(max-width: 640px) 100vw, 440px" />
                   </div>
                   <div className="work-pills work-case-pills">
                     <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Built in 15 days</span>
-                    <span style={{ boxShadow: "inset 0 0 0 1px rgba(243,240,233,0.3)", color: "var(--paper)", background: "rgba(14,14,12,0.35)" }}>Design system · WordPress</span>
+                    <span style={{ boxShadow: "inset 0 0 0 1px rgba(243,240,233,0.3)", color: "var(--paper)" }}>Design system · WordPress</span>
                   </div>
                 </div>
                 <div className="work-meta">

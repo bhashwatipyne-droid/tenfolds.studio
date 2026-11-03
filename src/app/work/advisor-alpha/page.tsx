@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { Reveal } from "@/components/Interactive";
-import { aa, aaBuild, aaPillars, aaProblems, aaTools, type Img } from "@/lib/advisoralpha";
+import { Browser } from "@/components/CaseStudy";
+import { aa, aaBuild, aaPillars, aaProblems, aaTools, live } from "@/lib/advisoralpha";
 
 export const metadata: Metadata = {
   title: "Advisor Alpha case study — tenfolds",
@@ -12,17 +13,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Advisor Alpha: equity research made approachable, in 15 days",
     description: "Design system, UI and WordPress build for an equity research platform.",
-    images: [{ url: aa.desktop.src }],
+    images: [{ url: live.hero.src, width: live.hero.w, height: live.hero.h }],
   },
 };
-
-function Shot({ img, sizes, priority = false, className = "" }: { img: Img; sizes: string; priority?: boolean; className?: string }) {
-  return (
-    <figure className={`aa-shot ${className}`}>
-      <Image src={img.src} width={img.w} height={img.h} alt={img.alt} sizes={sizes} priority={priority} />
-    </figure>
-  );
-}
 
 export default function AdvisorAlphaCaseStudy() {
   return (
@@ -51,8 +44,8 @@ export default function AdvisorAlphaCaseStudy() {
               <div><dt>Sector</dt><dd>B2C fintech · Equity research</dd></div>
             </dl>
           </div>
-          <Reveal className="aa-hero-media">
-            <Shot img={aa.desktop} priority sizes="(max-width: 1360px) 100vw, 1280px" />
+          <Reveal className="cs-hero-media aa-hero-live">
+            <Browser shot={live.hero} url="myadvisoralpha.com" priority sizes="(max-width: 1360px) 100vw, 1180px" />
           </Reveal>
           <div className="stats cs-stats">
             <div><div className="stat-v">15 days</div><div className="stat-k">Designed and developed</div></div>
@@ -124,8 +117,30 @@ export default function AdvisorAlphaCaseStudy() {
             turn dense research into something investors want to read.
           </p>
           <div className="cs-gallery">
-            <Reveal><Shot img={aa.ipad} sizes="(max-width: 760px) 100vw, 640px" /></Reveal>
-            <Reveal delay={80}><Shot img={aa.iphoneDesk} sizes="(max-width: 760px) 100vw, 640px" /></Reveal>
+            <Reveal className="cs-g-wide">
+              <Browser shot={live.ideaCards} url="myadvisoralpha.com" />
+              <figcaption><b>Every idea, at a glance.</b> Entry, stop-loss and three progressive targets on one card, so investors see the whole plan before they act.</figcaption>
+            </Reveal>
+            <Reveal>
+              <Browser shot={live.horizons} url="myadvisoralpha.com" sizes="(max-width: 760px) 100vw, 640px" />
+              <figcaption><b>One filter, three horizons.</b> Short, mid and long-term ideas, each with its holding period spelled out.</figcaption>
+            </Reveal>
+            <Reveal delay={80}>
+              <Browser shot={live.alerts} url="myadvisoralpha.com" sizes="(max-width: 760px) 100vw, 640px" />
+              <figcaption><b>Real-time updates.</b> New ideas, revisions and exits pushed the moment they happen.</figcaption>
+            </Reveal>
+            <Reveal className="cs-g-wide">
+              <Browser shot={live.targets} url="myadvisoralpha.com" />
+              <figcaption><b>A track record you can audit.</b> How targets work, followed by closed ideas with their actual buy, exit and net gain.</figcaption>
+            </Reveal>
+            <Reveal>
+              <Browser shot={live.trust} url="myadvisoralpha.com" sizes="(max-width: 760px) 100vw, 640px" />
+              <figcaption><b>Trust, made explicit.</b> SEBI registration, methodology and risk definition up front, not in the footer.</figcaption>
+            </Reveal>
+            <Reveal delay={80}>
+              <Browser shot={live.steps} url="myadvisoralpha.com" sizes="(max-width: 760px) 100vw, 640px" />
+              <figcaption><b>Four steps to start.</b> Plan, payment, digital KYC and first idea, fully paperless.</figcaption>
+            </Reveal>
           </div>
           <Reveal className="cs-phones aa-phones">
             <div className="cs-phones-copy">

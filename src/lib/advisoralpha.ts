@@ -16,6 +16,20 @@ export const aa = {
   ],
 } satisfies Record<string, Img | Img[]>;
 
+// Screenshots of the live site (myadvisoralpha.com/single-stock-page)
+const L = "/work/advisor-alpha";
+export const live = {
+  hero: { src: `${L}/hero.webp`, w: 1425, h: 930, alt: "MyAdvisorAlpha stock ideas page: “High-conviction ideas, across every time horizon.” with live performance stats" },
+  heroFold: { src: `${L}/hero-fold.webp`, w: 1425, h: 724, alt: "MyAdvisorAlpha stock ideas hero" },
+  ideaCards: { src: `${L}/idea-cards.webp`, w: 1425, h: 875, alt: "What a stock idea looks like: entry, stop-loss and three progressive targets" },
+  targets: { src: `${L}/targets.webp`, w: 1425, h: 755, alt: "How targets work, and past stock ideas with booked gains" },
+  horizons: { src: `${L}/horizons.webp`, w: 1425, h: 545, alt: "Ideas for every investor style: short, mid and long term" },
+  alerts: { src: `${L}/alerts.webp`, w: 1425, h: 505, alt: "Real-time updates on every idea" },
+  steps: { src: `${L}/steps.webp`, w: 1425, h: 610, alt: "Start investing in 4 simple steps" },
+  trust: { src: `${L}/trust.webp`, w: 1425, h: 510, alt: "Why investors trust MyAdvisorAlpha" },
+  approach: { src: `${L}/approach.webp`, w: 1425, h: 550, alt: "Three things we do differently" },
+} satisfies Record<string, Img>;
+
 export const aaProblems = [
   { t: "Engagement gap", d: "Deep-dive reports run past 20 pages and were hard to navigate on a phone." },
   { t: "Trust deficit", d: "The look felt old-school rather than timeless, which made it harder to win younger, high-net-worth investors." },
