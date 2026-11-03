@@ -13,7 +13,7 @@ export function LogoMark() {
   );
 }
 
-export default function Header() {
+export default function Header({ base = "" }: { base?: string }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -34,17 +34,17 @@ export default function Header() {
   return (
     <header className="header">
       <div className="wrap header-inner">
-        <a href="#top" className="logo" onClick={() => setOpen(false)}>
+        <a href={base ? "/" : "#top"} className="logo" onClick={() => setOpen(false)}>
           <LogoMark />
           <span>tenfolds</span>
         </a>
         <nav className="nav" aria-label="Primary">
           {nav.map((n) => (
-            <a key={n.href} href={n.href}>{n.label}</a>
+            <a key={n.href} href={base + n.href}>{n.label}</a>
           ))}
         </nav>
         <div className="header-actions">
-          <a href="#contact" className="btn btn-dark cta-sm" onClick={() => setOpen(false)}>
+          <a href={base + "#contact"} className="btn btn-dark cta-sm" onClick={() => setOpen(false)}>
             Start a project<span className="btn-dot">→</span>
           </a>
           <button className="menu-btn" aria-label="Menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
@@ -55,7 +55,7 @@ export default function Header() {
       {open && (
         <nav className="drawer" aria-label="Mobile">
           {nav.map((n, i) => (
-            <a key={n.href} href={n.href} onClick={() => setOpen(false)}>
+            <a key={n.href} href={base + n.href} onClick={() => setOpen(false)}>
               <span>{n.label}</span>
               <span>{pad(i)}</span>
             </a>
