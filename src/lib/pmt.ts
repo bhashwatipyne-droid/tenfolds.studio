@@ -3,9 +3,9 @@ const P = "/work/pmt";
 export const pmtMedia = {
   film: `${P}/film.mp4`,
   poster: { src: `${P}/poster.webp`, w: 1200, h: 675, alt: "PMT Work Sheet: log work like a spreadsheet" },
-  planning: { src: `${P}/planning.webp`, w: 1280, h: 720, alt: "PMT Planning: a WhatsApp tasklist matched to client, project and assignee" },
-  projects: { src: `${P}/projects.webp`, w: 1280, h: 720, alt: "PMT Projects: every deliverable, every stage" },
-  efficiency: { src: `${P}/efficiency.webp`, w: 1280, h: 720, alt: "PMT Efficiency: productivity measured against each person's real capacity" },
+  planning: { src: `${P}/planning-live.webp`, w: 1440, h: 724, alt: "PMT Planning: this week’s schedule, one row per person, bars coloured by status" },
+  projects: { src: `${P}/projects-live.webp`, w: 1440, h: 724, alt: "PMT Projects: board of projects by stage" },
+  efficiency: { src: `${P}/efficiency-live.webp`, w: 1440, h: 724, alt: "PMT Efficiency: team productivity against capacity" },
 };
 
 export const pmtQuotes = [

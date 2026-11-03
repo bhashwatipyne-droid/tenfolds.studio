@@ -227,11 +227,11 @@ export default function PmtCaseStudy() {
           <div className="cs-gallery">
             <Reveal className="cs-g-wide">
               <Browser shot={pmtMedia.planning} url="pmt-work-management.vercel.app" />
-              <figcaption><b>Planning.</b> A manager’s WhatsApp tasklist, matched line by line to client, project and assignee, with confidence scores.</figcaption>
+              <figcaption><b>Planning.</b> The week’s schedule, one row per person, with each bar coloured by what changed and load shown against capacity. Tasklists from WhatsApp land here for review.</figcaption>
             </Reveal>
             <Reveal>
               <Browser shot={pmtMedia.projects} url="pmt-work-management.vercel.app" sizes="(max-width: 760px) 100vw, 640px" />
-              <figcaption><b>Projects.</b> Every deliverable, every stage: Content → Design → Animate.</figcaption>
+              <figcaption><b>Projects.</b> Every project on a board by stage, with Content, Design and Animate work counted on each card.</figcaption>
             </Reveal>
             <Reveal delay={80}>
               <Browser shot={pmtMedia.efficiency} url="pmt-work-management.vercel.app" sizes="(max-width: 760px) 100vw, 640px" />
