@@ -407,7 +407,6 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 @media (min-width: 1100px) {
   .work-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .work-grid > * { grid-column: span 2; }
-  .work-grid > .is-case { grid-column: span 3; }
 }
 .work-case-shot { border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6), 0 0 0 1px rgba(243,240,233,0.1); }
 .work-case-shot img { display: block; width: 100%; height: auto; }
@@ -444,3 +443,60 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 .aa-tools b { font-size: 15px; font-weight: 600; }
 .aa-tools span { font-size: 12px; color: var(--muted); }
 .aa-hero-live { padding: clamp(14px, 3vw, 48px); background: radial-gradient(circle at 85% 15%, rgba(205,242,90,0.5), transparent 45%), rgb(33, 52, 150); }
+
+/* PMT case study */
+.pmt-film { margin-top: clamp(28px, 4vw, 56px); border-radius: 28px; padding: clamp(10px, 2vw, 24px); background: radial-gradient(circle at 15% 10%, rgba(205,242,90,0.45), transparent 40%), var(--ink); }
+.pmt-film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 16px; background: #000; }
+.pmt-film-cap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding: 14px 6px 2px; color: var(--paper); font-size: 14px; }
+.pmt-film-cap .mono { font-size: 11px; text-transform: uppercase; color: rgb(160,156,146); }
+.pmt-quotes { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px; }
+.pmt-quote { border-radius: 20px; background: var(--sand); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
+.pmt-quote p { font-family: var(--font-serif); font-style: italic; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.15; letter-spacing: -0.02em; }
+.pmt-quote .mono { font-size: 11px; text-transform: uppercase; color: var(--muted); }
+.pmt-personas { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px; }
+.pmt-persona { border-radius: 20px; box-shadow: inset 0 0 0 1px var(--line); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 8px; }
+.pmt-persona .mono { font-size: 11px; color: var(--muted); text-transform: uppercase; }
+.pmt-persona h3 { margin-top: 8px; font-size: clamp(20px, 1.8vw, 24px); font-weight: 600; letter-spacing: -0.035em; }
+.pmt-persona small { font-size: 13px; color: var(--muted); }
+.pmt-persona p { font-size: 15px; line-height: 1.5; color: var(--body); }
+.pmt-need { margin-top: auto; padding-top: 14px; box-shadow: inset 0 1px 0 var(--line); font-size: 14px; font-weight: 500; display: flex; flex-direction: column; gap: 4px; }
+.pmt-need .mono { font-size: 10px; }
+.pmt-insight { border-radius: 28px; background: var(--ink); color: var(--paper); padding: clamp(24px, 5vw, 64px); }
+.pmt-insight p { margin-top: 20px; font-size: clamp(17px, 1.5vw, 19px); line-height: 1.55; color: rgb(190, 186, 176); max-width: 62ch; }
+.pmt-insight p b { color: var(--paper); font-weight: 500; }
+.pmt-decision { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; }
+.pmt-surface { border-radius: 28px; background: var(--sand); padding: clamp(24px, 3.4vw, 40px); }
+.pmt-surface:nth-child(2) { background: var(--lime); }
+.pmt-surface .mono { font-size: 11px; text-transform: uppercase; color: var(--muted); }
+.pmt-surface:nth-child(2) .mono { color: rgb(60,70,30); }
+.pmt-surface h3 { margin-top: 14px; font-size: clamp(32px, 4vw, 56px); font-weight: 600; letter-spacing: -0.05em; line-height: 1; }
+.pmt-surface p { margin-top: 16px; font-size: 16px; line-height: 1.5; color: var(--body); max-width: 48ch; }
+.pmt-flow { margin-top: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 8px; }
+.pmt-flow span { border-radius: 16px; box-shadow: inset 0 0 0 1px var(--line); padding: 14px 16px; font-size: 14px; font-weight: 500; line-height: 1.35; display: flex; flex-direction: column; gap: 8px; }
+.pmt-flow b { font-size: 11px; font-weight: 400; color: var(--muted); }
+.pmt-principles { margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 12px; }
+.pmt-principle { background: var(--ink-2); color: var(--paper); cursor: default; height: 100%; }
+.pmt-principle:first-child { background: var(--lime); color: var(--ink); }
+.pmt-principle .step-t { font-size: clamp(20px, 1.8vw, 24px); }
+.pmt-modules { margin-top: clamp(32px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); box-shadow: inset 0 1px 0 var(--line); }
+.pmt-module { padding: 24px 24px 24px 0; box-shadow: inset 0 -1px 0 var(--line); }
+.pmt-module .mono { font-size: 11px; color: var(--muted); }
+.pmt-module h3 { margin-top: 10px; font-size: 20px; font-weight: 600; letter-spacing: -0.03em; }
+.pmt-module p { margin-top: 8px; font-size: 15px; line-height: 1.5; color: var(--body); max-width: 40ch; }
+.cs-perf-copy > p + p { margin-top: 12px; }
+.pmt-chart { margin: 0; background: var(--paper); color: var(--ink); border-radius: 20px; padding: clamp(16px, 2.4vw, 28px); }
+.pmt-chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 15px; font-weight: 600; }
+.pmt-chart figcaption .mono { font-size: 11px; font-weight: 400; color: var(--muted); text-transform: uppercase; }
+.pmt-chart svg { display: block; width: 100%; height: auto; margin-top: 12px; overflow: visible; }
+.pmt-chart .grid { stroke: rgba(14,14,12,0.08); }
+.pmt-chart .base { stroke: rgba(14,14,12,0.3); }
+.pmt-chart .ytick { font: 11px var(--font-mono); fill: var(--muted); text-anchor: end; }
+.pmt-chart .xtick { font: 10px var(--font-mono); fill: var(--muted); text-anchor: middle; }
+.pmt-chart .area { fill: rgba(18,52,40,0.1); }
+.pmt-chart .ln { fill: none; stroke: var(--forest); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.pmt-chart .ln.dash { stroke-dasharray: 5 6; opacity: 0.6; }
+.pmt-chart .pt { fill: var(--forest); stroke: var(--paper); stroke-width: 2; }
+.pmt-chart .pt.peak { fill: var(--lime); stroke: var(--ink); }
+.pmt-chart .pt.open { fill: var(--paper); stroke: var(--forest); }
+.pmt-chart .peak { font: 600 13px var(--font-sans); fill: var(--ink); text-anchor: middle; }
+.pmt-chart-note { margin-top: 8px; font-size: 12px; color: var(--muted); }

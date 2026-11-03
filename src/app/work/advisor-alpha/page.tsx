@@ -216,7 +216,7 @@ export default function AdvisorAlphaCaseStudy() {
           <div className="legal">
             <span>© {new Date().getFullYear()} tenfolds</span>
             <span>
-              <a href="/work/finace" className="cs-link" style={{ color: "rgb(190,186,176)" }}>Previous case study: Finace →</a>
+              <a href="/work/finace" className="cs-link" style={{ color: "rgb(190,186,176)" }}>← Finace</a> · <a href="/work/pmt" className="cs-link" style={{ color: "rgb(190,186,176)" }}>Next case study: PMT →</a>
             </span>
           </div>
         </div>

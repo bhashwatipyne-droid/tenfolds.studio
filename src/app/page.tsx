@@ -4,6 +4,7 @@ import { INK, checks, pad, problems, quality, work } from "@/lib/content";
 import Image from "next/image";
 import { shots } from "@/lib/finace";
 import { live } from "@/lib/advisoralpha";
+import { pmtMedia } from "@/lib/pmt";
 
 const heroVideo = process.env.NEXT_PUBLIC_HERO_VIDEO;
 const heroImage = process.env.NEXT_PUBLIC_HERO_IMAGE;
@@ -79,7 +80,7 @@ export default function Home() {
         <section id="work" className="wrap work">
           <div className="section-head">
             <h2>Selected work</h2>
-            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(05)</span>
+            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(06)</span>
           </div>
           <div className="work-grid">
             <Reveal className="is-case">
@@ -122,8 +123,28 @@ export default function Home() {
                 </div>
               </a>
             </Reveal>
+            <Reveal className="is-case" delay={180}>
+              <a href="/work/pmt" className="work-item">
+                <div className="work-tile" style={{ background: "var(--lime)" }}>
+                  <div className="work-top" style={{ color: "rgb(60,70,30)" }}>
+                    <span>pmt · work management</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--ink)" }}>Case study</span>
+                  </div>
+                  <div className="work-case-shot">
+                    <Image src={pmtMedia.poster.src} width={pmtMedia.poster.w} height={pmtMedia.poster.h} alt={pmtMedia.poster.alt} sizes="(max-width: 640px) 100vw, 440px" />
+                  </div>
+                  <div className="work-pills work-case-pills">
+                    <span style={{ background: "var(--ink)", color: "var(--lime)", fontWeight: 600 }}>0 → 20 weekly users</span>
+                    <span style={{ boxShadow: "inset 0 0 0 1px rgba(14,14,12,0.25)", color: "var(--ink)" }}>▶ 76s product film</span>
+                  </div>
+                </div>
+                <div className="work-meta">
+                  <div><div className="work-meta-name">PMT</div><div className="work-meta-desc">Work management platform · Agency ops</div></div>
+                  <span className="arrow-circle">↗</span>
+                </div>
+              </a>
+            </Reveal>
             {work.map((p, i) => (
-              <Reveal key={p.name} delay={(i + 2) * 90}>
+              <Reveal key={p.name} delay={i * 90}>
                 <a href="#contact" className="work-item">
                   <div className="work-tile" style={{ background: p.bg }}>
                     <div className="work-top" style={{ color: p.sub }}>
