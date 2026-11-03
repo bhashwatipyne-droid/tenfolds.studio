@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { AuditForm, Calculator, CostBar, Faq, Process, Reveal, Services } from "@/components/Interactive";
 import { INK, checks, pad, problems, quality, work } from "@/lib/content";
-import { Browser } from "@/components/CaseStudy";
+import Image from "next/image";
 import { shots } from "@/lib/finace";
 
 const heroVideo = process.env.NEXT_PUBLIC_HERO_VIDEO;
@@ -77,30 +77,32 @@ export default function Home() {
         {/* Work + calculator */}
         <section id="work" className="wrap work">
           <div className="section-head">
-            <h2>Case study</h2>
-            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(01)</span>
-          </div>
-          <Reveal>
-            <a href="/work/finace" className="feature-case">
-              <div>
-                <div className="eyebrow lime">Finace · BFSI marketing agency</div>
-                <h3>A ten-year-old website, <span className="serif">rebuilt in ten days.</span></h3>
-                <p>User-journey research, a new design and strong SEO for a finance-first agency trusted by 70+ brands.</p>
-                <div className="feature-case-stats">
-                  <span><b>10 days</b> to live</span><span><b>99</b> performance</span><span><b>100</b> SEO</span>
-                </div>
-                <span className="btn cta-sm">Read the case study<span className="btn-dot">→</span></span>
-              </div>
-              <Browser shot={shots.hero} sizes="(max-width: 860px) 100vw, 720px" />
-            </a>
-          </Reveal>
-          <div className="section-head" style={{ marginTop: "clamp(48px,6vw,72px)" }}>
-            <h2>Selected concepts</h2>
-            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(03)</span>
+            <h2>Selected work</h2>
+            <span className="mono" style={{ fontSize: 12, color: "var(--muted)" }}>(04)</span>
           </div>
           <div className="work-grid">
+            <Reveal>
+              <a href="/work/finace" className="work-item">
+                <div className="work-tile" style={{ background: "rgb(14,14,12)" }}>
+                  <div className="work-top" style={{ color: "rgb(160,156,146)" }}>
+                    <span>finace.co</span><span style={{ whiteSpace: "nowrap", flex: "none", color: "var(--lime)" }}>Case study</span>
+                  </div>
+                  <div className="work-case-shot">
+                    <Image src={shots.hero.src} width={shots.hero.w} height={shots.hero.h} alt={shots.hero.alt} sizes="(max-width: 640px) 100vw, 360px" />
+                  </div>
+                  <div className="work-pills work-case-pills">
+                    <span style={{ background: "var(--lime)", color: "var(--ink)", fontWeight: 600 }}>Live in 10 days</span>
+                    <span style={{ boxShadow: "inset 0 0 0 1px rgba(243,240,233,0.18)", color: "var(--paper)" }}>99 performance · 100 SEO</span>
+                  </div>
+                </div>
+                <div className="work-meta">
+                  <div><div className="work-meta-name">Finace</div><div className="work-meta-desc">Agency site rebuild · BFSI marketing</div></div>
+                  <span className="arrow-circle">↗</span>
+                </div>
+              </a>
+            </Reveal>
             {work.map((p, i) => (
-              <Reveal key={p.name} delay={i * 90}>
+              <Reveal key={p.name} delay={(i + 1) * 90}>
                 <a href="#contact" className="work-item">
                   <div className="work-tile" style={{ background: p.bg }}>
                     <div className="work-top" style={{ color: p.sub }}>
