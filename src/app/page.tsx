@@ -304,7 +304,7 @@ export default function Home() {
           <div className="eyebrow lime">Free website audit</div>
           <h2>Your clients are already <span className="serif lime-text">searching for you.</span></h2>
           <div className="footer-row">
-            <p>Give them something worth finding. Send your current site and we’ll audit it, free.</p>
+            <p>Give them something worth finding. Already have a site? No problem, we’ll audit it, free.</p>
             <AuditForm />
           </div>
           <div className="wordmark" aria-hidden="true">

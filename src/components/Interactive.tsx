@@ -198,7 +198,7 @@ export function Faq() {
 /* ---------- Audit form ---------- */
 export function AuditForm() {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
-  const [url, setUrl] = useState("");
+  const [contact, setContact] = useState("");
 
   async function submit(e: FormEvent) {
     e.preventDefault();
@@ -207,7 +207,7 @@ export function AuditForm() {
       const res = await fetch("/api/audit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url }),
+        body: JSON.stringify({ contact }),
       });
       setState(res.ok ? "sent" : "error");
     } catch {
@@ -216,14 +216,14 @@ export function AuditForm() {
   }
 
   if (state === "sent") {
-    return <div className="audit-done">✓ Received. We’ll send your audit within 24 hours.</div>;
+    return <div className="audit-done">✓ Received. We’ll get back to you within 24 hours.</div>;
   }
   return (
     <form className="audit-form" onSubmit={submit}>
-      <input type="url" required placeholder="Your website or ARN profile link" aria-label="Your website link"
-        value={url} onChange={(e) => setUrl(e.target.value)} />
+      <input type="text" required placeholder="Your website or number, to take this forward" aria-label="Your website link or phone number"
+        value={contact} onChange={(e) => setContact(e.target.value)} />
       <button type="submit" className="btn btn-lime" disabled={state === "sending"} style={{ justifyContent: "center" }}>
-        {state === "sending" ? "Sending…" : "Get my free audit →"}
+        {state === "sending" ? "Sending…" : "Get in touch →"}
       </button>
       {state === "error" && <div className="audit-err">Something went wrong. Please try again in a moment.</div>}
     </form>
