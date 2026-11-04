@@ -220,7 +220,7 @@ export function AuditForm() {
   }
   return (
     <form className="audit-form" onSubmit={submit}>
-      <input type="text" required placeholder="Your website or number, to take this forward" aria-label="Your website link or phone number"
+      <input type="text" required placeholder="Your website or phone number" aria-label="Your website link or phone number"
         value={contact} onChange={(e) => setContact(e.target.value)} />
       <button type="submit" className="btn btn-lime" disabled={state === "sending"} style={{ justifyContent: "center" }}>
         {state === "sending" ? "Sending…" : "Get in touch →"}

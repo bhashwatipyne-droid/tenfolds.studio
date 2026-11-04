@@ -72,7 +72,7 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 .cta-sm { height: 44px; gap: 10px; padding: 0 8px 0 18px; font-size: 14px; font-weight: 500; }
 .cta-sm .btn-dot { width: 30px; height: 30px; background: var(--lime); color: var(--ink); font-size: 15px; }
 .menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 9999px; background: var(--sand); color: var(--ink); cursor: pointer; font: 500 13px var(--font-sans); }
-.drawer { position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--ink); padding: 24px var(--gutter); display: flex; flex-direction: column; gap: 4px; overflow-y: auto; }
+.drawer { position: fixed; z-index: 29; top: 68px; left: 0; right: 0; bottom: 0; background: var(--ink); padding: 24px var(--gutter); display: flex; flex-direction: column; gap: 4px; overflow-y: auto; }
 .drawer a { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; box-shadow: inset 0 -1px 0 var(--line-dark); color: var(--paper); font-size: 36px; font-weight: 600; letter-spacing: -0.04em; }
 .drawer a span:last-child { font-family: var(--font-mono); font-size: 12px; color: var(--lime); letter-spacing: 0; }
 @media (max-width: 979px) {
@@ -81,6 +81,10 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 }
 @media (max-width: 420px) {
   .cta-sm { padding: 0 6px 0 14px; font-size: 13px; }
+}
+/* Very small phones: header can't fit logo + CTA + menu; the CTA lives in the drawer instead */
+@media (max-width: 359px) {
+  .header-actions .cta-sm { display: none; }
 }
 
 /* Hero */
@@ -249,7 +253,7 @@ input[type="range"] { accent-color: var(--lime); width: 100%; height: 28px; curs
 .checks > div { display: flex; align-items: center; gap: 14px; padding: 16px 0; box-shadow: inset 0 1px 0 var(--line); font-size: 17px; }
 .check { flex: none; width: 26px; height: 26px; border-radius: 9999px; background: var(--lime); display: grid; place-items: center; font-size: 13px; font-weight: 700; }
 .pricing { padding-top: clamp(48px, 6vw, 88px); padding-bottom: clamp(48px, 6vw, 88px); align-items: stretch; }
-.price-card { flex: 1 1 380px; border-radius: 28px; background: var(--lime); padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; gap: 28px; }
+.price-card { flex: 1 1 380px; min-width: 0; max-width: 100%; border-radius: 28px; background: var(--lime); padding: clamp(24px, 4vw, 44px); display: flex; flex-direction: column; gap: 28px; }
 .price-top { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 500; }
 .price-top span:last-child { padding: 6px 12px; border-radius: 9999px; background: var(--ink); color: var(--lime); font-family: var(--font-mono); font-size: 11px; }
 .price { font-size: clamp(64px, 9vw, 128px); font-weight: 600; letter-spacing: -0.06em; line-height: 0.9; }
